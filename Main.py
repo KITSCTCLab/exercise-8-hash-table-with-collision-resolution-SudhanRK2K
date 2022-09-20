@@ -4,8 +4,7 @@ def display_hash(hashtable) -> None:
 	for i in range(len(hashtable)):
 		print(i, end=' ')
 	for j in hashtable[i]:
-		print('-->',end=' ')
-		print(j,end=' ')
+		print('-->',j,end=' ')
 		
 	print()
 def Hashing(keyvalue) -> int:
@@ -13,8 +12,7 @@ def Hashing(keyvalue) -> int:
 
 def insert(Hashtable, keyvalue, value):
 	# Write your code here
-	hash_key=Hashing(keyvalue)
-	Hashtable[hash_key].append(value)
+	Hashtable[keyvalue%len(Hashtable)].append(value)
 
 
 # Do not edit the following code
